@@ -1,5 +1,5 @@
-@import "ay-crestron-fonts/css/crestronfonts.css";
-@import "ay-crestron-fonts/css/neo.css";
+@import "../../node_modules/ay-crestron-fonts/css/neo.css";
+@import "../../node_modules/ay-crestron-fonts/css/crestronfonts.css";
 
 * {
     margin: 0;

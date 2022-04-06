@@ -3,12 +3,35 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { AddressBook } from "./AddressBook";
 
 export default {
-    title: "AddressBook",
+    title: "Components/AddressBook",
     component: AddressBook,
+    argTypes: {
+        fontSize: { type: "number", defaultValue: 100 },
+        color: { type: "string", defaultValue: "#000" }
+    }
 } as ComponentMeta<typeof AddressBook>;
 
-export const Default: ComponentStory<typeof AddressBook> = () => (
-    <AddressBook />
-);
+const Template: ComponentStory<typeof AddressBook> = ({ fontSize, color, ...args }) => {
+    const style = {
+        fontSize: `${fontSize}px`, 
+        color: color
+    }
 
-export const AddressBook = Default;
+    return (
+        <div style={style}>
+            <AddressBook {...args} />
+        </div>
+    )
+}
+
+export const Black = Template.bind({})
+Black.args = {
+    fontSize: 100,
+    color: "#000"
+}
+
+export const White = Template.bind({})
+White.args = {
+    fontSize: 100,
+    color: "#fff"
+}

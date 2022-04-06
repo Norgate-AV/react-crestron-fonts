@@ -8,14 +8,15 @@ module.exports = {
         config.plugins.push(
             postcss({
                 plugins: [
+                    postcssImport(),
                     autoprefixer(),
                     cssnano({
                         preset: "default",
                     }),
-                    postcssImport(),
                 ],
                 inject: false,
                 extract: !!options.writeMeta,
+                // writeDefinitions: true,
             })
         );
 
