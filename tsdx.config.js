@@ -1,9 +1,9 @@
 const postcss = require("rollup-plugin-postcss");
 const autoprefixer = require("autoprefixer");
 const cssnano = require("cssnano");
+const postcssImport = require("postcss-import");
 
 module.exports = {
-    // This function will run for each entry/format/env combination
     rollup(config, options) {
         config.plugins.push(
             postcss({
@@ -12,12 +12,13 @@ module.exports = {
                     cssnano({
                         preset: "default",
                     }),
+                    postcssImport(),
                 ],
                 inject: false,
-                // only write out CSS for the first bundle (avoids pointless extra files):
                 extract: !!options.writeMeta,
             })
         );
-        return config; // always return a config.
+
+        return config;
     },
 };
