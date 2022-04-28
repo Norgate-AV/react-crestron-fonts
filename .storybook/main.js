@@ -24,6 +24,13 @@ module.exports = {
     // https://storybook.js.org/docs/react/configure/typescript#mainjs-configuration
     typescript: {
         check: true, // type-check stories during Storybook build
+        checkOptions: {},
+        reactDocgen: "react-docgen-typescript",
+        reactDocgenTypescriptOptions: {
+            shouldExtractLiteralValuesFromEnum: true,
+            propFilter: (prop) =>
+                prop.parent ? !/node_modules/.test(prop.parent.fileName) : true,
+        },
     },
     // webpackFinal: async (config, {configType}) => {
     //     config.module.rules.push({test: /\.(ttf|eot|svg|gif|woff|woff2)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
