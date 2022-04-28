@@ -7,31 +7,40 @@ export default {
     component: AddressBook,
     argTypes: {
         fontSize: { type: "number", defaultValue: 100 },
-        color: { type: "string", defaultValue: "#000" }
-    }
+        color: { type: "string", defaultValue: "#000" },
+    },
 } as ComponentMeta<typeof AddressBook>;
 
-const Template: ComponentStory<typeof AddressBook> = ({ fontSize, color, ...args }) => {
+interface Props {
+    fontSize: number;
+    color: string;
+}
+
+const Template: ComponentStory<typeof AddressBook> = ({
+    fontSize,
+    color,
+    ...args
+}: Props) => {
     const style = {
-        fontSize: `${fontSize}px`, 
-        color: color
-    }
+        fontSize: `${fontSize}px`,
+        color,
+    };
 
     return (
         <div style={style}>
             <AddressBook {...args} />
         </div>
-    )
-}
+    );
+};
 
-export const Black = Template.bind({})
+export const Black = Template.bind({});
 Black.args = {
     fontSize: 100,
-    color: "#000"
-}
+    color: "#000",
+};
 
-export const White = Template.bind({})
+export const White = Template.bind({});
 White.args = {
     fontSize: 100,
-    color: "#fff"
-}
+    color: "#fff",
+};

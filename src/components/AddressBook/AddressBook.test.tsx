@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import {AddressBook} from "./AddressBook";
+import { AddressBook } from "./AddressBook";
 
 describe("AddressBook", () => {
     it("renders without crashing", () => {

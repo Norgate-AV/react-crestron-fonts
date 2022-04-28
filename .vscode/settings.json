@@ -3,6 +3,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true,
     "editor.formatOnPaste": true,
+    "files.autoSave": "onFocusChange",
     "files.trimTrailingWhitespace": true,
     "[markdown]": {
         "files.trimTrailingWhitespace": false
@@ -25,8 +26,8 @@
         // "no-hard-tabs": false
         "MD026": false,
         "MD033": false
-    },
-    "editor.codeActionsOnSave": {
-        "source.fixAll.markdownlint": true
     }
+    // "editor.codeActionsOnSave": {
+    //     "source.fixAll.markdownlint": true
+    // }
 }

@@ -17,7 +17,7 @@ module.exports = {
                 inject: false,
                 extract: !!options.writeMeta,
                 // writeDefinitions: true,
-            })
+            }),
         );
 
         return config;

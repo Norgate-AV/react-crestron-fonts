@@ -5,7 +5,7 @@ module.exports = {
         "@storybook/addon-essentials",
         "storybook-dark-mode",
         {
-            name: '@storybook/addon-storysource',
+            name: "@storybook/addon-storysource",
             options: {
                 loaderOptions: {
                     injectStoryParameters: false,
