@@ -11,16 +11,14 @@ export default {
     },
 } as ComponentMeta<typeof AddressBook>;
 
-interface Props {
-    fontSize: number;
-    color: string;
-}
-
 const Template: ComponentStory<typeof AddressBook> = ({
     fontSize,
     color,
     ...args
-}: Props) => {
+}: {
+    fontSize: number;
+    color: string;
+}) => {
     const style = {
         fontSize: `${fontSize}px`,
         color,
