@@ -1,6 +1,9 @@
 import React from "react";
-import { ComponentStory, ComponentMeta } from "@storybook/react";
+import { Story, Meta } from "@storybook/react";
 import { AddressBook } from "./AddressBook";
+import { BaseComponentType } from "../../types";
+
+type ComponentType = BaseComponentType<typeof AddressBook>;
 
 export default {
     title: "Components/AddressBook",
@@ -9,16 +12,13 @@ export default {
         fontSize: { type: "number", defaultValue: 100 },
         color: { type: "string", defaultValue: "#000" },
     },
-} as ComponentMeta<typeof AddressBook>;
+} as Meta<ComponentType>;
 
-const Template: ComponentStory<typeof AddressBook> = ({
+const Template: Story<ComponentType> = ({
     fontSize,
     color,
     ...args
-}: {
-    fontSize: number;
-    color: string;
-}) => {
+}: ComponentType) => {
     const style = {
         fontSize: `${fontSize}px`,
         color,
