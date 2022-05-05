@@ -1,0 +1,12 @@
+{
+    "extends": "./tsconfig.json",
+    "include": [
+        "tsdx.config.js",
+        "postcss.config.js",
+        "jest.config.js",
+        ".storybook"
+    ],
+    "compilerOptions": {
+        "allowJs": true
+    }
+}
