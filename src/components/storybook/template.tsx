@@ -1,52 +1,80 @@
-import React from "react";
-import { Story, Meta } from "@storybook/react";
-import { AddressBook } from "../AddressBook";
-import { BaseComponentType } from "../../types";
+// import React from "react";
+// import { Story, Meta } from "@storybook/react";
+// import { BaseComponentType, ICustomProps } from "../../types";
 
-type ComponentType = BaseComponentType<typeof AddressBook>;
+// const story: Meta = {
+//     // argTypes: {
+//     //     fontSize: { type: "number", defaultValue: 100 },
+//     //     color: { type: "string", defaultValue: "#000" },
+//     // },
+// };
 
-export default {
-    title: "Components/AddressBook",
-    component: AddressBook,
-    argTypes: {
-        fontSize: { type: "number", defaultValue: 100 },
-        color: { type: "string", defaultValue: "#000" },
-    },
-} as Meta<ComponentType>;
+// function StoryTemplate<T extends React.JSXElementConstructor<T>>({
+//     Child,
+//     fontSize,
+//     color,
+//     ...args
+// }: ICustomProps & { Child: React.JSXElementConstructor<T> }) {
+//     const style = {
+//         fontSize: `${fontSize}px`,
+//         color,
+//     };
 
-const Template: Story<ComponentType> = ({
-    fontSize,
-    color,
-    ...args
-}: ComponentType) => {
-    const style = {
-        fontSize: `${fontSize}px`,
-        color,
-    };
+//     return (
+//         <div style={style}>
+//             <Child {...args} />
+//         </div>
+//     );
+// }
 
-    return (
-        <div style={style}>
-            <AddressBook {...args} />
-        </div>
-    );
-};
+// interface IStoryTemplateProps<T> extends ICustomProps {
+//     Component: React.JSXElementConstructor<T>;
+// }
 
-const Black = Template.bind({});
-Black.args = {
-    fontSize: 100,
-    color: "#000",
-};
+// function StoryTemplate<T>({
+//     Component,
+//     fontSize,
+//     color,
+//     ...args
+// }: IStoryTemplateProps<T>): Story<IStoryTemplateProps> {
+//     const style = {
+//         fontSize: `${fontSize}px`,
+//         color,
+//     };
 
-const White = Template.bind({});
-White.args = {
-    fontSize: 100,
-    color: "#fff",
-};
+//     return (
+//         <div style={style}>
+//             <Component {...args} />
+//         </div>
+//     );
+// }
 
-const Custom = Template.bind({});
-Custom.args = {
-    fontSize: 100,
-    color: "#fff",
-};
+// const Template: Story = ({ children, fontSize, color, ...args }) => {
+//     const style = {
+//         fontSize: `${fontSize}px`,
+//         color,
+//     };
 
-export { Black, White, Custom };
+//     return <div style={style}>{children}</div>;
+// };
+
+// export default story;
+
+// const Black = Template.bind({});
+// Black.args = {
+//     fontSize: 100,
+//     color: "#000",
+// };
+
+// const White = Template.bind({});
+// White.args = {
+//     fontSize: 100,
+//     color: "#fff",
+// };
+
+// const Custom = Template.bind({});
+// Custom.args = {
+//     fontSize: 100,
+//     color: "#fff",
+// };
+export {};
