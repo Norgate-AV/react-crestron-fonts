@@ -1,44 +1,44 @@
-import React from "react";
-import { Story, Meta } from "@storybook/react";
+import { Meta } from "@storybook/react";
+// import { useArgTypes } from "@storybook/api";
 import { AddressBook } from "./AddressBook";
-import { BaseComponentType } from "../../types";
+import { StoryTemplate } from "../storybook/StoryTemplate";
+import { defaultArgs } from "../storybook/defaultArgs";
 
-type ComponentType = BaseComponentType<typeof AddressBook>;
+const component = AddressBook;
+const title = `Components/${component.name}`;
+type ComponentType = typeof component;
+// const { argTypes } = useArgTypes();
+const { fontSize } = defaultArgs;
 
 export default {
-    title: "Components/AddressBook",
-    component: AddressBook,
-    argTypes: {
-        fontSize: { type: "number", defaultValue: 100 },
-        color: { type: "string", defaultValue: "#000" },
-    },
+    title,
+    component,
+    // argTypes,
 } as Meta<ComponentType>;
 
-const Template: Story<ComponentType> = ({
-    fontSize,
-    color,
-    ...args
-}: ComponentType) => {
-    const style = {
-        fontSize: `${fontSize}px`,
-        color,
-    };
-
-    return (
-        <div style={style}>
-            <AddressBook {...args} />
-        </div>
-    );
-};
-
-export const Black = Template.bind({});
+export const Black = StoryTemplate<ComponentType>(
+    { fontSize, color: "#000" },
+    { component },
+).bind({});
 Black.args = {
-    fontSize: 100,
+    fontSize,
     color: "#000",
 };
 
-export const White = Template.bind({});
+export const White = StoryTemplate<ComponentType>(
+    { fontSize, color: "#FFF" },
+    { component },
+).bind({});
 White.args = {
-    fontSize: 100,
-    color: "#fff",
+    fontSize,
+    color: "#FFF",
+};
+
+export const Custom = StoryTemplate<ComponentType>(
+    { fontSize, color: "#FF80BF" },
+    { component },
+).bind({});
+Custom.args = {
+    fontSize,
+    color: "#FF80BF",
 };
