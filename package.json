@@ -103,10 +103,5 @@
     },
     "dependencies": {
         "ay-crestron-fonts": "^2.0.0"
-    },
-    "config": {
-        "commitizen": {
-            "path": "./node_modules/cz-conventional-changelog"
-        }
     }
 }
