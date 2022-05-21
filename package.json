@@ -104,20 +104,6 @@
     "dependencies": {
         "ay-crestron-fonts": "^2.0.0"
     },
-    "lint-staged": {
-        "*?(test|spec).{ts,tsx}": [
-            "yarn lint:fix",
-            "yarn pretty:fix",
-            "yarn test"
-        ],
-        "*?(test|spec).{js,jsx}": [
-            "yarn pretty:fix",
-            "yarn test"
-        ],
-        "*.{css,scss,md,html,json,yml,yaml}": [
-            "yarn pretty:fix"
-        ]
-    },
     "config": {
         "commitizen": {
             "path": "./node_modules/cz-conventional-changelog"
