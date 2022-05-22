@@ -1,6 +1,6 @@
 import { Meta } from "@storybook/react";
 import { AddressBook } from "./AddressBook";
-import { StoryTemplate } from "../storybook/StoryTemplate";
+import { StoryTemplate } from "../../storybook/StoryTemplate";
 
 const component = AddressBook;
 const title = `Components/${component.name}`;
