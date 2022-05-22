@@ -1,6 +1,6 @@
 import React from "react";
 import { Story } from "@storybook/react";
-import { BaseComponentType } from "../../types";
+import { BaseComponentType } from "../types";
 
 export const StoryTemplate = <T extends React.JSXElementConstructor<T>>(
     templateArgs: Partial<BaseComponentType<T>>,
