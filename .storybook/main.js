@@ -1,28 +1,39 @@
 module.exports = {
-    stories: ["../src/**/**/*.stories.@(ts|tsx|js|jsx|mdx)"],
+    stories: [
+        "../src/**/*.stories.mdx",
+        "../src/**/*.stories.@(js|jsx|ts|tsx)",
+    ],
     addons: [
         "@storybook/addon-links",
         "@storybook/addon-essentials",
-        "@storybook/api",
-        "storybook-dark-mode",
+        // "@storybook/addon-interactions",
         {
             name: "@storybook/addon-storysource",
             options: {
                 loaderOptions: {
                     injectStoryParameters: false,
                 },
+                prettierConfig: {
+                    printWidth: 80,
+                    singleQuote: false,
+                    tabWidth: 4,
+                    bracketSpacing: true,
+                    trailingComma: "all",
+                },
             },
         },
-        // {
-        //     name: "@storybook/addon-postcss",
-        //     options: {
-        //         postcssLoaderOptions: {
-        //             implementation: require("postcss"),
-        //         },
-        //     },
-        // },
+        {
+            name: "@storybook/addon-postcss",
+            options: {
+                postcssLoaderOptions: {
+                    implementation: require("postcss"),
+                },
+            },
+        },
+        "storybook-css-modules-preset",
+        "storybook-dark-mode",
     ],
-    // https://storybook.js.org/docs/react/configure/typescript#mainjs-configuration
+    framework: "@storybook/react",
     typescript: {
         check: true, // type-check stories during Storybook build
         checkOptions: {},
@@ -33,28 +44,4 @@ module.exports = {
                 prop.parent ? !/node_modules/.test(prop.parent.fileName) : true,
         },
     },
-    // webpackFinal: async (config, {configType}) => {
-    //     config.module.rules.push({test: /\.(ttf|eot|svg|gif|woff|woff2)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-    //             use: [{
-    //                 loader: 'file-loader',
-    //             }]})
-    //     return config;
-    // },
-    // webpackFinal: async (config, {configType}) => {
-    //     config.module.rules.push({
-    //         test: /\.css$/,
-    //         use: [
-    //             {
-    //                 loader: 'postcss-loader',
-    //                 options: {
-    //                     indent: "postcss",
-    //                     plugins: [
-    //                         require("postcss")
-    //                     ]
-    //                 }
-    //             }
-    //         ]
-    //     })
-    //     return config;
-    // },
 };

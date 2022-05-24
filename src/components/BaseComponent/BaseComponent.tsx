@@ -1,9 +1,14 @@
 import React from "react";
-import "../../../styles/index.css";
-// import classes from '../../css/index.css';
+import styles from "../../styles/styles.module.css";
 
-export function BaseComponent({ icon }: { icon: string }) {
-    return <span className={`crneo ${icon}`} />;
+interface IBaseComponentProps {
+    icon: string;
 }
+
+export const BaseComponent: React.FunctionComponent<IBaseComponentProps> = ({
+    icon,
+}) => {
+    return <span className={`${styles.crneo} ${icon}`} />;
+};
 
 export default BaseComponent;

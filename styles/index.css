@@ -1,8 +1,0 @@
-@import "../node_modules/ay-crestron-fonts/css/neo.css";
-@import "../node_modules/ay-crestron-fonts/css/crestronfonts.css";
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}

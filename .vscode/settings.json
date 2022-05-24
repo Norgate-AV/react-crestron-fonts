@@ -26,7 +26,8 @@
         // "no-hard-tabs": false
         "MD026": false,
         "MD033": false
-    }
+    },
+    "typescript.tsdk": "node_modules/typescript/lib"
     // "editor.codeActionsOnSave": {
     //     "source.fixAll.markdownlint": true
     // }

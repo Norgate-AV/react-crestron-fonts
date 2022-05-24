@@ -1,6 +1,7 @@
 {
     // see https://www.typescriptlang.org/tsconfig to better understand tsconfigs
     "include": ["src", "types"],
+    "exclude": ["src/storybook"],
     "compilerOptions": {
         "module": "esnext",
         "lib": ["dom", "esnext"],
@@ -30,6 +31,11 @@
         // error out if import and file system have a casing mismatch. Recommended by TS
         "forceConsistentCasingInFileNames": true,
         // `tsdx build` ignores this option, but it is commonly used when type-checking separately with `tsc`
-        "noEmit": true
+        "noEmit": true,
+        "plugins": [
+            {
+                "name": "typescript-plugin-css-modules"
+            }
+        ]
     }
 }
