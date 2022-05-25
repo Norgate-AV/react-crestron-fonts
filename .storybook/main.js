@@ -5,14 +5,18 @@ module.exports = {
     ],
     addons: [
         "@storybook/addon-links",
-        "@storybook/addon-essentials",
-        // "@storybook/addon-interactions",
+        {
+            name: "@storybook/addon-essentials",
+            options: {
+                actions: false,
+            },
+        },
         {
             name: "@storybook/addon-storysource",
             options: {
-                loaderOptions: {
-                    injectStoryParameters: false,
-                },
+                // loaderOptions: {
+                //     injectStoryParameters: false,
+                // },
                 prettierConfig: {
                     printWidth: 80,
                     singleQuote: false,

@@ -1,3 +1,6 @@
+// import { themes } from "@storybook/theming";
+import dracula from "./dracula";
+
 export const parameters = {
     actions: { argTypesRegex: "^on[A-Z].*" },
     controls: {
@@ -5,6 +8,9 @@ export const parameters = {
             color: /(background|color)$/i,
             date: /Date$/,
         },
+    },
+    docs: {
+        theme: dracula,
     },
     darkMode: {
         current: "dark",
