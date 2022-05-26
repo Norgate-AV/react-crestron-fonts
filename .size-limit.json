@@ -1,0 +1,10 @@
+[
+    {
+        "path": "dist/react-crestron-fonts.cjs.production.min.js",
+        "limit": "10 KB"
+    },
+    {
+        "path": "dist/react-crestron-fonts.esm.js",
+        "limit": "10 KB"
+    }
+]
