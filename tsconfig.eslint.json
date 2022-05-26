@@ -4,7 +4,8 @@
         "tsdx.config.js",
         "postcss.config.js",
         "jest.config.js",
-        ".storybook"
+        ".storybook",
+        "rollup"
     ],
     "compilerOptions": {
         "allowJs": true
