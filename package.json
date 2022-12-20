@@ -44,7 +44,7 @@
         "@storybook/addon-essentials": "^6.4.20",
         "@storybook/addon-info": "^5.3.21",
         "@storybook/addon-links": "^6.4.20",
-        "@storybook/addons": "^6.4.20",
+        "@storybook/addons": "^6.5.15",
         "@storybook/react": "^6.4.20",
         "@storybook/testing-react": "^1.2.4",
         "@types/react": "^17.0.43",
